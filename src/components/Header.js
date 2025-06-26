@@ -1,10 +1,20 @@
 import React from 'react';
+import ThemeContext from '../ThemeContext';
 import { Link } from 'react-router-dom';
 
 const LoggedOutView = props => {
   if (!props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
+        <ThemeContext.Consumer>
+          {({ toggle, dark }) => (
+            <li className="nav-item">
+              <button className="nav-link btn btn-link" onClick={toggle}>
+                {dark ? 'Light Mode' : 'Dark Mode'}
+              </button>
+            </li>
+          )}
+        </ThemeContext.Consumer>
 
         <li className="nav-item">
           <Link to="/" className="nav-link">
@@ -34,6 +44,15 @@ const LoggedInView = props => {
   if (props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
+        <ThemeContext.Consumer>
+          {({ toggle, dark }) => (
+            <li className="nav-item">
+              <button className="nav-link btn btn-link" onClick={toggle}>
+                {dark ? 'Light Mode' : 'Dark Mode'}
+              </button>
+            </li>
+          )}
+        </ThemeContext.Consumer>
 
         <li className="nav-item">
           <Link to="/" className="nav-link">
