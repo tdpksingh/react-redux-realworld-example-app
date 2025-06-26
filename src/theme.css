@@ -1,0 +1,28 @@
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .article-preview,
+body.dark-mode .pager {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .nav-link,
+body.dark-mode .navbar-brand {
+  color: #ffffff;
+}
+
+body.dark-mode .btn-outline-primary {
+  color: #90caf9;
+  border-color: #90caf9;
+}
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #90caf9;
+  color: #000;
+}
